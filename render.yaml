@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: rasa-server
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: standard
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 5005
